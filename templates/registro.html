@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block contenido %}
+<section class="form-login">
+    <form action="{{ url_for('registro')}}" method="POST" novalidate>
+        <img src="{{ url_for('static',filename='img/avatar.png') }}" alt="">
+
+         <h5>Registro</h5>
+         <div class="control">
+            <input type="text" name="Usuario" value="" placeholder="Usuario">
+            <label for="usuario"></label>
+        </div>
+        <div class="control">
+         <input type="password" name="contraseña" value="" placeholder="Contraseña">
+         <label for="contraseña"></label>
+        </div>
+        <div class="control">
+         <input type="password" name="contraseña" value="" placeholder="Confirma Contraseña">
+         <label for="contraseña"></label>
+        </div>
+        <div class="button">
+         <input class="button" type="submit" name="registrar" value="Registrar" >
+         <label for="Registrar"></label>
+        </div>
+    </form>
+ </section>
+{% endblock %}
